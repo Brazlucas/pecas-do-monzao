@@ -1,10 +1,16 @@
 import React from 'react'
 import './PartCard.css'
 
-const PartCard = ({ part, onToggle }) => {
+const PartCard = ({ part, onToggle, onPurchaseClick }) => {
   const handleToggle = (e) => {
     e.preventDefault()
     onToggle(part.id)
+  }
+
+  const handlePurchaseClick = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    onPurchaseClick(part)
   }
 
   const getPriorityColor = (priority) => {
@@ -42,23 +48,37 @@ const PartCard = ({ part, onToggle }) => {
       </div>
 
       <div className="card-footer">
-        <button 
-          className="checkbox-container" 
-          onClick={handleToggle}
-          type="button"
-        >
-          <input
-            type="checkbox"
-            checked={part.checked}
-            onChange={() => {}} // Controlled by button click
-            style={{ display: 'none' }}
-          />
-          <span className="checkmark"></span>
-          <span className="checkbox-label">
-            {part.checked ? 'Trocada' : 'Marcar como trocada'}
-          </span>
-        </button>
+        <div className="footer-actions">
+          <button 
+            className="checkbox-container" 
+            onClick={handleToggle}
+            type="button"
+          >
+            <input
+              type="checkbox"
+              checked={part.checked}
+              onChange={() => {}} // Controlled by button click
+              style={{ display: 'none' }}
+            />
+            <span className="checkmark"></span>
+            <span className="checkbox-label">
+              {part.checked ? 'Trocada' : 'Marcar como trocada'}
+            </span>
+          </button>
+          
+          {part.purchaseLinks && !part.checked && part.hasPrice && (
+            <button 
+              className="purchase-button"
+              onClick={handlePurchaseClick}
+              title="Ver opções de compra"
+            >
+              <span className="purchase-icon">🛒</span>
+              <span className="purchase-text">Comprar</span>
+            </button>
+          )}
+        </div>
       </div>
+
     </div>
   )
 }

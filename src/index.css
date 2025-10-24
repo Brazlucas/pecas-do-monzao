@@ -10,7 +10,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-ZntVvi6CAHpj9ZbTSRH13492nl2uY5voClEDCPs5zFZJ2P_DSDM_16b8xqTw5yZkrXgmLepR2x5qyFPWx3SpvVd4wauZJdlspf3YBnRWgFr64PVofu-pKETupZZsfVwvla_D/w1200-h630-p-k-no-nu/Chevrolet+Monza+GLS+01.jpg');
+  background-size: auto;
   min-height: 100vh;
   color: #333;
 }
