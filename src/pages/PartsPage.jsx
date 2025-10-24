@@ -195,6 +195,17 @@ const PartsPage = () => {
       purchaseLinks: [
         { name: 'Mercado Livre', url: 'https://mercadolivre.com.br/alto-falante-bravox-kit-facil-6-triaxial-quadriaxial-6x9-cor-preto', icon: '🛒' },
       ]
+    },
+    {
+      id: 13,
+      name: 'Pintura das rodas',
+      price: '0800 (sogrão)',
+      priority: 'Baixa',
+      image: 'https://a-static.mlcdn.com.br/420x420/kit-calotinha-centro-roda-monza-barcelona-turin-kadett-gsi-gfm/relampagopecas/3323p/cec598fb4ddd999b02fed61e48a8440d.jpeg',
+      description: 'Pintura das rodas',
+      checked: false,
+      hasPrice: false,
+      category: 'Pintura',
     }
   ])
   
