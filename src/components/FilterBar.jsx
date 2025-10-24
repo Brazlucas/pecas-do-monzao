@@ -1,7 +1,7 @@
 import React from 'react'
 import './FilterBar.css'
 
-const FilterBar = ({ activeFilter, onFilterChange, parts }) => {
+const FilterBar = ({ activeFilter, onFilterChange, parts = [] }) => {
   // Obter categorias únicas das peças
   const categories = ['Todas', ...Array.from(new Set(parts.map(part => part.category)))]
   
@@ -24,7 +24,7 @@ const FilterBar = ({ activeFilter, onFilterChange, parts }) => {
             key={category}
             className={`filter-button ${activeFilter === category ? 'active' : ''}`}
             onClick={() => onFilterChange(category)}
-            title={`Ver ${category.toLowerCase()}`}
+            title={`Ver ${typeof category === 'string' ? category.toLowerCase() : category}`}
           >
             <span className="button-text">{category}</span>
             <span className="button-count">({getCategoryCount(category)})</span>

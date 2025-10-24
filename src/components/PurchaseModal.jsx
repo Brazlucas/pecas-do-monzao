@@ -30,7 +30,7 @@ const PurchaseModal = ({ isOpen, onClose, purchaseLinks, partName }) => {
         
         <div className="modal-body">
           <div className="purchase-options">
-            {purchaseLinks && purchaseLinks.map((link, index) => (
+            {purchaseLinks && purchaseLinks.length > 0 && purchaseLinks.map((link, index) => (
               <button
                 key={index}
                 className="purchase-option"
