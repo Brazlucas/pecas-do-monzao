@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Sistema de gerenciamento de peças para Monza",
   "main": "index.js",
-  "homepage": "https://brazlucas.github.io",
+  "homepage": "https://brazlucas.github.io/pecas-do-monzao",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
